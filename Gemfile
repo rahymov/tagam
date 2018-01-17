@@ -21,6 +21,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 gem 'jquery-slick-rails', '~> 1.8', '>= 1.8.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
+gem 'devise', '~> 4.4'
 
 
 
