@@ -8,6 +8,8 @@ class MenuItemsController < ApplicationController
     if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
       @menu_items = MenuItem.where(category_id: @category_id).order("created_at DESC")
+    else 
+      @menu_items = MenuItem.all
     end
   end
 
@@ -58,7 +60,7 @@ class MenuItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_menu_item
-      @menu_item = MenuItem.friendly.find(params[:id])
+      @menu_item = MenuItem.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
