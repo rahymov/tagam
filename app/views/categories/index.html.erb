@@ -1,0 +1,11 @@
+<% @categories.each_slice(4) do |category| %>
+  <div class="container">
+    <% category.each do |cat| %>
+      <div class="col-md-3">
+        <div class="menu_item">
+          <h3><%= link_to cat.name, menu_items_path(category: cat.name) %></h3>    
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
