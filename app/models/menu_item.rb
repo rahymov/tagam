@@ -5,5 +5,6 @@ class MenuItem < ApplicationRecord
 	attr_accessor :slug
 
 	belongs_to :category
+	
 	validates :title, :description, :price, :category_id, presence: :true
 end

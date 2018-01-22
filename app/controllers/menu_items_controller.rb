@@ -15,16 +15,22 @@ class MenuItemsController < ApplicationController
 
   def show
   end
+  
+  def menu_item_by_slug
+    @category = Category.friendly.find(params[:slug])
+    # @menu_item = MenuItem.friendly.find(params[:category_id])
+  end
 
   def new
-    @menu_item = MenuItem.new
+    @category = Category.find(params[:category_id]).id
+    @menu_item = @category.menu_items.new
   end
 
   def edit
   end
 
   def create
-    @menu_item = MenuItem.new(menu_item_params)
+    @menu_item = current_admin.build(menu_item_params)
 
     respond_to do |format|
       if @menu_item.save
@@ -60,7 +66,8 @@ class MenuItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_menu_item
-      @menu_item = MenuItem.find(params[:id])
+      @category = Category.friendly.find(params[:category_id])
+      @menu_item = MenuItem.firendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

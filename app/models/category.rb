@@ -1,9 +1,10 @@
 class Category < ApplicationRecord
 	
 	extend FriendlyId
-	friendly_id :name, use: [:finders, :slugged ]
-	attr_accessor :slug
 	
+	friendly_id :name, use: [:finders, :slugged]
+	
+	belongs_to :admin
 	has_many :menu_items
 
 	# def should_generate_new_friendly_id?
