@@ -1,3 +1,31 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#navbar
+{
+	background: white;
+	border: 0;
+	padding-top: 5px;
+	font-weight: 700;
+}
+	.navbar-default .container .navbar-nav > li > a {
+    color: #31698a;
+    &:hover
+    {
+    	font-size: 30px;
+    	color: #005694;
+    	border: 0 solid black;
+	    padding: 12px 20px;
+	    border-radius: 5px;
+	    background: aqua;
+	    font-family: 'Dancing Script', cursive;
+			
+    }
+}
+
+.navbar-default .container .navbar-brand 
+{
+	font-size: 30px;
+	font-family: 'Dancing Script', cursive;
+}

@@ -1,3 +1,24 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#category_container
+{
+	padding-top: 50px;
+}
+.container .category > h3 >a
+{
+	font-size: 35px;
+	text-decoration: none;
+	margin-top: 60px;
+	color: #00B0FF;
+	&:hover
+	{
+		font-family: 'Dancing Script', cursive;
+		font-weight: 700;
+		font-size: 50px;
+		border-radius: 5px;
+		padding: 7px 15px;
+	}
+}

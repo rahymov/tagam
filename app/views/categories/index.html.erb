@@ -1,8 +1,8 @@
 <% @categories.each_slice(4) do |category| %>
-  <div class="container">
+  <div class="container" id="category_container">
     <% category.each do |cat| %>
       <div class="col-md-3">
-        <div class="menu_item">
+        <div class="category">
           <h3><%= link_to cat.name, menu_item_by_slug_url(slug: cat.slug) %></h3>    
         </div>
       </div>
